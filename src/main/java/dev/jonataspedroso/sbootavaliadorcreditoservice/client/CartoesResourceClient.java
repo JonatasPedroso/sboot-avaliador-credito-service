@@ -1,5 +1,6 @@
 package dev.jonataspedroso.sbootavaliadorcreditoservice.client;
 
+import dev.jonataspedroso.sbootavaliadorcreditoservice.domain.entity.Cartao;
 import dev.jonataspedroso.sbootavaliadorcreditoservice.domain.entity.CartaoCliente;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -14,4 +15,6 @@ public interface CartoesResourceClient {
 	@GetMapping(params = "cpf")
 	ResponseEntity<List<CartaoCliente>> getCartoesByCliente(@RequestParam("cpf") String cpf);
 
+	@GetMapping(params = "renda")
+	ResponseEntity<List<Cartao>> getCartoesRendaAteh(@RequestParam("renda") Long renda);
 }

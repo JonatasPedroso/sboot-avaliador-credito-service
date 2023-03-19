@@ -14,4 +14,5 @@ import lombok.Setter;
 public class DadosCliente {
 	private Long id;
 	private String nome;
+    private Integer idade;
 }
